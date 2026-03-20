@@ -1,0 +1,30 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-9.0.2, pluggy-1.6.0 -- /usr/local/python/3.12.1/bin/python3
+cachedir: .pytest_cache
+rootdir: /workspaces/ap1-2026s1
+plugins: anyio-4.11.0
+collecting ... collected 8 items
+
+test_aprovado.py::test1 PASSED                                           [ 12%]
+test_aprovado.py::test2 PASSED                                           [ 25%]
+test_aprovado.py::test3 PASSED                                           [ 37%]
+test_aprovado.py::test4 PASSED                                           [ 50%]
+test_aprovado.py::test5 PASSED                                           [ 62%]
+test_aprovado.py::test6 FAILED                                           [ 75%]
+test_aprovado.py::test7 PASSED                                           [ 87%]
+test_aprovado.py::test8 PASSED                                           [100%]
+
+=================================== FAILURES ===================================
+____________________________________ test6 _____________________________________
+
+    def test6():
+>       assert aprovado(6, 80, 20) == "Aprovado"
+E       AssertionError: assert 'Reprovado por faltas' == 'Aprovado'
+E         
+E         - Aprovado
+E         + Reprovado por faltas
+
+test_aprovado.py:19: AssertionError
+=========================== short test summary info ============================
+FAILED test_aprovado.py::test6 - AssertionError: assert 'Reprovado por faltas...
+========================= 1 failed, 7 passed in 0.05s ==========================
